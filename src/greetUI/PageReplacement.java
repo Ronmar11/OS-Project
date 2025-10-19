@@ -35,6 +35,7 @@ public class PageReplacement extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
+        exit = new java.awt.Label();
         label1 = new java.awt.Label();
         jLabel1 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
@@ -59,23 +60,39 @@ public class PageReplacement extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(51, 51, 51));
         jPanel6.setForeground(new java.awt.Color(102, 102, 102));
 
+        exit.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
+        exit.setForeground(new java.awt.Color(255, 255, 255));
+        exit.setText("x");
+        exit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitMouseClicked(evt);
+            }
+        });
+
         label1.setFont(new java.awt.Font("Myanmar Text", 1, 28)); // NOI18N
         label1.setForeground(new java.awt.Color(255, 102, 153));
         label1.setText("PAGE REPLACEMENT ALGORITHM");
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/greetUI/SYSTEM-Photoroom.png"))); // NOI18N
         jLabel1.setText("jLabel1");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(65, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45))
+                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(148, 148, 148)
+                .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -87,6 +104,10 @@ public class PageReplacement extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(label1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel7.setBackground(new java.awt.Color(102, 102, 102));
@@ -99,6 +120,11 @@ public class PageReplacement extends javax.swing.JFrame {
         Reference_String.setForeground(new java.awt.Color(51, 51, 51));
         Reference_String.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Reference_String.setText("Input Number of String");
+        Reference_String.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Reference_StringActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -346,6 +372,24 @@ public class PageReplacement extends javax.swing.JFrame {
         
     }//GEN-LAST:event_lruButtonActionPerformed
 
+    private void Reference_StringActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Reference_StringActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Reference_StringActionPerformed
+
+    private void exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseClicked
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Goodbye!!!");
+        System.exit(0);
+    }//GEN-LAST:event_exitMouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        // TODO add your handling code here:
+        Greeting greet = new Greeting();
+        greet.setVisible(true);
+        
+        PageReplacement.this.setVisible(false);
+    }//GEN-LAST:event_jLabel1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -385,6 +429,7 @@ public class PageReplacement extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Number_frame;
     private javax.swing.JTextField Reference_String;
+    private java.awt.Label exit;
     private java.awt.Button fifoButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

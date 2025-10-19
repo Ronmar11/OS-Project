@@ -4,6 +4,7 @@
  */
 package greetUI;
 
+import javax.swing.JOptionPane;
 import pagereplacement.MainApp;
 
 /**
@@ -44,6 +45,7 @@ public class Greeting extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         label1 = new java.awt.Label();
         jLabel1 = new javax.swing.JLabel();
+        exit = new java.awt.Label();
         jLabel4 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -120,6 +122,15 @@ public class Greeting extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/greetUI/SYSTEM-Photoroom.png"))); // NOI18N
         jLabel1.setText("jLabel1");
 
+        exit.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
+        exit.setForeground(new java.awt.Color(255, 255, 255));
+        exit.setText("x");
+        exit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -128,8 +139,10 @@ public class Greeting extends javax.swing.JFrame {
                 .addContainerGap(65, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45))
+                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(158, 158, 158)
+                .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,6 +154,10 @@ public class Greeting extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(label1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31))
         );
 
         jLabel4.setFont(new java.awt.Font("Rockwell Condensed", 0, 28)); // NOI18N
@@ -149,7 +166,7 @@ public class Greeting extends javax.swing.JFrame {
 
         jLabel14.setFont(new java.awt.Font("Rockwell Condensed", 0, 28)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("Justine Espiritu,");
+        jLabel14.setText("Justin Espiritu,");
 
         jLabel15.setFont(new java.awt.Font("Rockwell Condensed", 0, 28)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
@@ -281,6 +298,12 @@ public class Greeting extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseClicked
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Goodbye!!!");
+        System.exit(0);
+    }//GEN-LAST:event_exitMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -318,6 +341,7 @@ public class Greeting extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel MainJPanel;
+    private java.awt.Label exit;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

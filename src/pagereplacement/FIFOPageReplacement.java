@@ -2,10 +2,10 @@ package pagereplacement;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 import java.util.HashSet;
+import java.util.List;
 import java.util.stream.Collectors;
 
 /**
@@ -30,6 +30,7 @@ public class FIFOPageReplacement {
         Set<Integer> memoryPages = new HashSet<>(frames);
         Queue<Integer> fifoQueue = new LinkedList<>();
         List<Integer> frameState = new ArrayList<>(frames);
+        
         for(int i = 0; i < frames; i++) {
             frameState.add(-1); 
         }
@@ -99,6 +100,7 @@ public class FIFOPageReplacement {
         output.append("Reference String: \n");
         output.append("                       ");
         for (int page : pages) {
+            
             output.append(String.format("%-4d", page));
         }
         output.append("\n");
